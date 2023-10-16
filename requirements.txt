@@ -1,3 +1,4 @@
+urllib3
 fastapi
 pydantic
 uvicorn
