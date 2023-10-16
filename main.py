@@ -24,7 +24,7 @@ async def create_upload_file(file: UploadFile):
     dt_string = now.strftime("%d%m%Y%H%M%S")
     print("date and time =", dt_string)
 
-    ext_ = name_ = file.filename.split(".")[1]    
+    ext_ = file.filename.split(".")[1]    
     file_location = dt_string+"."+ext_
     
     with open(file_location, "wb+") as file_object:
