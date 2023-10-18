@@ -15,19 +15,20 @@ def read_root():
 
 @app.post("/uploadfile/")
 async def create_upload_file(imgurl: str):
+    print("Input: ", imgurl)
     # api-endpoint
     gptURL = "https://ag-sales-bot.onrender.com/async_gpt/"
     now = datetime.now()     
 
     # dd/mm/YY H:M:S
     dt_string = now.strftime("%d%m%Y%H%M%S")
-    print("date and time =", dt_string)
+    # print("date and time =", dt_string)
 
     base_name = os.path.basename(imgurl)
     file_name_with_extension = base_name.split('?')[0]
     file_name, file_extension = os.path.splitext(file_name_with_extension)
     final_filename = file_name + file_extension
-    print(final_filename)
+    # print(final_filename)
 
     urllib.request.urlretrieve(imgurl, final_filename)
 
@@ -47,5 +48,7 @@ async def create_upload_file(imgurl: str):
      
     # extracting data in json format
     data = r.json()
+    print("Output: ", data)
+    
     return data
 
