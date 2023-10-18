@@ -17,7 +17,7 @@ def read_root():
 async def create_upload_file(imgurl: str):
     print("Input: ", imgurl)
     # api-endpoint
-    gptURL = "https://ag-sales-bot.onrender.com/async_gpt/"
+    gptURL = "http://172.16.16.54:8080/async_gpt/"
     now = datetime.now()     
 
     # dd/mm/YY H:M:S
@@ -49,6 +49,6 @@ async def create_upload_file(imgurl: str):
     # extracting data in json format
     data = r.json()
     print("Output: ", data)
-    
+
     return data
 
