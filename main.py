@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from doctr.models import ocr_predictor
 from doctr.io import DocumentFile
 
-app = FastAPI()
+app = FastAPI(title="OCR Doctrio Service", description="This is a OCR service using Doctrio", version="1.0.0")
 model = ocr_predictor('db_resnet50', "crnn_vgg16_bn", pretrained=True)
 
 def ocr_run(imgurl: str):
