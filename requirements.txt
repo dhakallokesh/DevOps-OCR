@@ -6,4 +6,4 @@ python-multipart
 torch
 torchvision
 opencv-python
-python-doctr
+python-doctr 
