@@ -26,7 +26,7 @@ def ocr_run(imgurl: str):
 
 @app.get("/")
 def read_root():
-    return "OCR Service"
+    return "Helllo next ai members"
 
 @app.post("/extract-text/")
 async def extract_text(imgurl: str):
@@ -34,7 +34,7 @@ async def extract_text(imgurl: str):
     return response_text
 
 @app.post("/uploadfile/")
-#async def create_upload_file(imgurl: str):
+async def create_upload_file(imgurl: str):
     print("Input: ", imgurl)
     gptURL = "http://172.16.16.54:8080/async_gpt/"
     
