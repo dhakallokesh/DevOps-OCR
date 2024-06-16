@@ -44,5 +44,5 @@ async def create_upload_file(imgurl: str):
     data = r.json()
     print("Output: ", data)
 
-    return data
+ #return data
 
